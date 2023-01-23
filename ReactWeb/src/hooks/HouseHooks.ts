@@ -75,10 +75,17 @@ const useDeleteHouse = () => {
   );
 };
 
+const getMapBasedAPIs = () => {
+  return useQuery<House[], AxiosError>("houses", () =>
+    axios.get(`${Config.baseApiUrl}/MapBasedAPIs`).then((resp) => resp.data)
+  );
+};
+
 export {
   useFetchHouses,
   useFetchHouse,
   useAddHouse,
   useUpdateHouse,
   useDeleteHouse,
+  getMapBasedAPIs
 };

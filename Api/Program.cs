@@ -1,3 +1,4 @@
+
 using Microsoft.AspNetCore.Mvc;
 using MiniValidation;
 
@@ -19,5 +20,6 @@ app.UseCors(p => p.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAn
 
 app.MapHouseEndpoints();
 app.MapBidEndpoints();
+app.MapWebBasedAPIs();
 
 app.Run();
