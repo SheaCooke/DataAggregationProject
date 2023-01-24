@@ -22,4 +22,6 @@ app.MapHouseEndpoints();
 app.MapBidEndpoints();
 app.MapWebBasedAPIs();
 
+app.MapTestConnectionToFastAPI();
+
 app.Run();
